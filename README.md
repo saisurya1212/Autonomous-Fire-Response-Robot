@@ -1,6 +1,6 @@
 # 🤖 Autonomous Fire Response Robot
 
-An intelligent **fire detection and response simulation** built using Python and Pygame. The system demonstrates how a **Model-Based Reflex Agent** can perceive its environment, remember the current state, navigate around obstacles, detect fires, extinguish them, and return to its base for charging.
+An intelligent **fire detection and response simulation** built using Python and Pygame. The system demonstrates how a **Model-Based Reflex Agent** can perceive its environment, maintain an internal state, navigate around obstacles, detect fires, extinguish them, and return to its base for charging.
 
 ## 🔥 Project Overview
 
@@ -21,9 +21,9 @@ The agent considers:
 * Obstacles
 * Battery level
 * Current operating mode
-* Previously detected environmental conditions
+* Environmental conditions
 
-Based on this internal state, the robot selects an appropriate action such as:
+Based on this internal state, the robot selects an appropriate action:
 
 **Detect → Navigate → Extinguish → Search for Next Fire → Return → Charge**
 
@@ -43,7 +43,7 @@ Based on this internal state, the robot selects an appropriate action such as:
 * 📊 Real-time robot and fire status display
 * 🎮 Interactive Pygame simulation
 
-## Project Demo
+## 📸 Project Demo
 
 ![Autonomous Fire Detection & Response Robot](./fire-detection-robot-demo.png)
 
@@ -66,6 +66,7 @@ Autonomous-Fire-Response-Robot/
 ├── sensor.py        # Environmental perception
 ├── settings.py      # Screen, grid and color configuration
 ├── assets/          # Robot and fire visual assets
+├── requirements.txt # Required Python libraries
 └── README.md        # Project documentation
 ```
 
@@ -81,7 +82,7 @@ A fire can be placed at an available grid location. Multiple fires can exist sim
 
 ### 3. Decision Making
 
-The robot evaluates the active fires and selects an appropriate target.
+The robot evaluates the active fires and selects an appropriate target based on its current internal state.
 
 ### 4. Pathfinding
 
@@ -89,7 +90,7 @@ The robot uses **Breadth-First Search (BFS)** to calculate a path while avoiding
 
 ### 5. Fire Extinguishing
 
-When the robot reaches the selected fire, it activates the extinguishing process.
+When the robot reaches the selected fire, it activates the extinguishing process and removes the fire from the environment.
 
 ### 6. Multiple Fire Handling
 
@@ -133,31 +134,29 @@ At the base, the robot enters charging mode and restores its battery.
                 Mission Complete
 ```
 
-## ▶️ Installation
+## ▶️ Installation & How to Run
 
-Make sure Python is installed on your system.
+Make sure **Python 3.x** is installed on your system.
 
-Install Pygame:
-
-```bash
-pip install pygame
-```
-
-## 🚀 Run the Project
-
-Clone the repository:
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/YOUR-USERNAME/Autonomous-Fire-Response-Robot.git
 ```
 
-Move into the project directory:
+### 2. Move into the Project Directory
 
 ```bash
 cd Autonomous-Fire-Response-Robot
 ```
 
-Run the simulation:
+### 3. Install Required Libraries
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run the Simulation
 
 ```bash
 python main.py
