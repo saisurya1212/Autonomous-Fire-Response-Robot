@@ -43,6 +43,10 @@ Based on this internal state, the robot selects an appropriate action such as:
 * 📊 Real-time robot and fire status display
 * 🎮 Interactive Pygame simulation
 
+## Project Demo
+
+![Autonomous Fire Detection & Response Robot](./fire-detection-robot-demo.png)
+
 ## 🛠️ Technologies Used
 
 * **Python**
